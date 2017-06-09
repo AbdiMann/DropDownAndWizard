@@ -28,6 +28,7 @@ namespace WebApplication6.Models
                 var reader = command.ExecuteReader();
                 var customers = new List<Customers>();
                 while (reader.Read())
+                    ff
                 {
                     var customer = new Customers();
                     customer.Id = (int)reader["Id"];
