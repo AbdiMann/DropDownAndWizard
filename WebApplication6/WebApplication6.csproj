@@ -44,6 +44,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -124,18 +152,108 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Customers.cs" />
+    <Compile Include="Models\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\components-md.css" />
+    <Content Include="Content\components-rounded.css" />
+    <Content Include="Content\components.css" />
+    <Content Include="Content\custom.css" />
+    <Content Include="Content\excanvas.min.js" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\holder.js" />
+    <Content Include="Content\jquery-migrate.min.js" />
+    <Content Include="Content\jquery.blockui.min.js" />
+    <Content Include="Content\jquery.cokie.min.js" />
+    <Content Include="Content\jquery.easing.js" />
+    <Content Include="Content\jquery.input-ip-address-control-1.0.min.js" />
+    <Content Include="Content\jquery.min.js" />
+    <Content Include="Content\jquery.mockjax.js" />
+    <Content Include="Content\jquery.parallax.js" />
+    <Content Include="Content\jquery.pulsate.min.js" />
+    <Content Include="Content\jquery.scrollTo.min.js" />
+    <Content Include="Content\jquery.sparkline.min.js" />
+    <Content Include="Content\layout.css" />
+    <Content Include="Content\moment.min.js" />
+    <Content Include="Content\plugins-md.css" />
+    <Content Include="Content\plugins.css" />
+    <Content Include="Content\respond.min.js" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="img\ajax-loading.gif" />
+    <Content Include="img\ajax-modal-loading.gif" />
+    <Content Include="img\arrow-down.png" />
+    <Content Include="img\avatar.png" />
+    <Content Include="img\avatar1.jpg" />
+    <Content Include="img\avatar10.jpg" />
+    <Content Include="img\avatar11.jpg" />
+    <Content Include="img\avatar1_small.jpg" />
+    <Content Include="img\avatar2.jpg" />
+    <Content Include="img\avatar3.jpg" />
+    <Content Include="img\avatar3_small.jpg" />
+    <Content Include="img\avatar4.jpg" />
+    <Content Include="img\avatar5.jpg" />
+    <Content Include="img\avatar6.jpg" />
+    <Content Include="img\avatar7.jpg" />
+    <Content Include="img\avatar8.jpg" />
+    <Content Include="img\avatar9.jpg" />
+    <Content Include="img\hor-menu-red-arrow.png" />
+    <Content Include="img\icon-color-close.png" />
+    <Content Include="img\icon-color.png" />
+    <Content Include="img\icon-img-down.png" />
+    <Content Include="img\icon-img-up.png" />
+    <Content Include="img\inbox-nav-arrow-blue.png" />
+    <Content Include="img\loading-spinner-blue.gif" />
+    <Content Include="img\loading-spinner-default.gif" />
+    <Content Include="img\loading-spinner-grey.gif" />
+    <Content Include="img\loading.gif" />
+    <Content Include="img\logo-big-white.png" />
+    <Content Include="img\logo-big.png" />
+    <Content Include="img\logo-invert.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\menu-toggler.png" />
+    <Content Include="img\photo1.jpg" />
+    <Content Include="img\photo2.jpg" />
+    <Content Include="img\photo3.jpg" />
+    <Content Include="img\remove-icon-small.png" />
+    <Content Include="img\search_icon_light.png" />
+    <Content Include="img\sidebar-menu-arrow-reverse.png" />
+    <Content Include="img\sidebar-menu-arrow-right.png" />
+    <Content Include="img\sidebar-menu-arrow.png" />
+    <Content Include="img\sidebar_arrow_icon_light.png" />
+    <Content Include="img\sidebar_arrow_icon_light_rtl.png" />
+    <Content Include="img\sidebar_inline_toggler_icon_blue.jpg" />
+    <Content Include="img\sidebar_inline_toggler_icon_darkblue.jpg" />
+    <Content Include="img\sidebar_inline_toggler_icon_default.jpg" />
+    <Content Include="img\sidebar_inline_toggler_icon_grey.jpg" />
+    <Content Include="img\sidebar_inline_toggler_icon_light.jpg" />
+    <Content Include="img\sidebar_inline_toggler_icon_light2.jpg" />
+    <Content Include="img\sidebar_toggler_icon_blue.png" />
+    <Content Include="img\sidebar_toggler_icon_darkblue.png" />
+    <Content Include="img\sidebar_toggler_icon_default.png" />
+    <Content Include="img\sidebar_toggler_icon_grey.png" />
+    <Content Include="img\sidebar_toggler_icon_light.png" />
+    <Content Include="img\sidebar_toggler_icon_light2.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Content\jquery.min.map" />
+    <Content Include="Content\components-md.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\datatable.js" />
+    <Content Include="Scripts\demo.js" />
+    <Content Include="Scripts\form-wizard.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -143,7 +261,10 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\layout.js" />
+    <Content Include="Scripts\metronic.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\quick-sidebar.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
@@ -158,18 +279,98 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\DropDownFromDatabase.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Content\amcharts\" />
+    <Folder Include="Content\angularjs\" />
+    <Folder Include="Content\autosize\" />
+    <Folder Include="Content\backstretch\" />
+    <Folder Include="Content\bootbox\" />
+    <Folder Include="Content\bootstrap-colorpicker\" />
+    <Folder Include="Content\bootstrap-confirmation\" />
+    <Folder Include="Content\bootstrap-contextmenu\" />
+    <Folder Include="Content\bootstrap-datepaginator\" />
+    <Folder Include="Content\bootstrap-datepicker\" />
+    <Folder Include="Content\bootstrap-daterangepicker\" />
+    <Folder Include="Content\bootstrap-datetimepicker\" />
+    <Folder Include="Content\bootstrap-editable\" />
+    <Folder Include="Content\bootstrap-fileinput\" />
+    <Folder Include="Content\bootstrap-growl\" />
+    <Folder Include="Content\bootstrap-gtreetable\" />
+    <Folder Include="Content\bootstrap-hover-dropdown\" />
+    <Folder Include="Content\bootstrap-markdown\" />
+    <Folder Include="Content\bootstrap-maxlength\" />
+    <Folder Include="Content\bootstrap-modal\" />
+    <Folder Include="Content\bootstrap-pwstrength\" />
+    <Folder Include="Content\bootstrap-selectsplitter\" />
+    <Folder Include="Content\bootstrap-select\" />
+    <Folder Include="Content\bootstrap-sessiontimeout\" />
+    <Folder Include="Content\bootstrap-summernote\" />
+    <Folder Include="Content\bootstrap-switch\" />
+    <Folder Include="Content\bootstrap-tabdrop\" />
+    <Folder Include="Content\bootstrap-timepicker\" />
+    <Folder Include="Content\bootstrap-toastr\" />
+    <Folder Include="Content\bootstrap-touchspin\" />
+    <Folder Include="Content\bootstrap-wizard\" />
+    <Folder Include="Content\bootstrap-wysihtml5\" />
+    <Folder Include="Content\bootstrap\" />
+    <Folder Include="Content\carousel-owl-carousel\" />
+    <Folder Include="Content\ckeditor\" />
+    <Folder Include="Content\clockface\" />
+    <Folder Include="Content\countdown\" />
+    <Folder Include="Content\counterup\" />
+    <Folder Include="Content\datatables\" />
+    <Folder Include="Content\dropzone\" />
+    <Folder Include="Content\fancybox\" />
+    <Folder Include="Content\flot\" />
+    <Folder Include="Content\font-awesome\" />
+    <Folder Include="Content\fuelux\" />
+    <Folder Include="Content\fullcalendar\" />
+    <Folder Include="Content\gmaps\" />
+    <Folder Include="Content\gritter\" />
+    <Folder Include="Content\icheck\" />
+    <Folder Include="Content\ion.rangeslider\" />
+    <Folder Include="Content\jcrop\" />
+    <Folder Include="Content\jquery-bootpag\" />
+    <Folder Include="Content\jquery-easypiechart\" />
+    <Folder Include="Content\jquery-file-upload\" />
+    <Folder Include="Content\jquery-idle-timeout\" />
+    <Folder Include="Content\jquery-inputmask\" />
+    <Folder Include="Content\jquery-knob\" />
+    <Folder Include="Content\jquery-minicolors\" />
+    <Folder Include="Content\jquery-mixitup\" />
+    <Folder Include="Content\jquery-multi-select\" />
+    <Folder Include="Content\jquery-nestable\" />
+    <Folder Include="Content\jquery-notific8\" />
+    <Folder Include="Content\jquery-slimscroll\" />
+    <Folder Include="Content\jquery-tags-input\" />
+    <Folder Include="Content\jquery-ui-touch-punch\" />
+    <Folder Include="Content\jquery-ui\" />
+    <Folder Include="Content\jquery-validation\" />
+    <Folder Include="Content\jqvmap\" />
+    <Folder Include="Content\jstree\" />
+    <Folder Include="Content\mapplic\" />
+    <Folder Include="Content\morris\" />
+    <Folder Include="Content\nouislider\" />
+    <Folder Include="Content\owl.carousel\" />
+    <Folder Include="Content\pace\" />
+    <Folder Include="Content\plupload\" />
+    <Folder Include="Content\rateit\" />
+    <Folder Include="Content\select2\" />
+    <Folder Include="Content\simple-line-icons\" />
+    <Folder Include="Content\slider-layer-slider\" />
+    <Folder Include="Content\slider-revolution-slider\" />
+    <Folder Include="Content\smooth-scroll\" />
+    <Folder Include="Content\tabdrop\" />
+    <Folder Include="Content\themes\" />
+    <Folder Include="Content\typeahead\" />
+    <Folder Include="Content\uniform\" />
+    <Folder Include="Content\zoom\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />

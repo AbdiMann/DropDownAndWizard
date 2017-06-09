@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "DropDownFromDatabase";
+}
+
+<h2>DropDownFromDatabase</h2>
+
+<select name="CustomerName" class="form-control">
+    @foreach (var item in ViewBag.GetCustomerName)
+    {
+        <option>@item.CustomerName</option>
+    }
+</select>
